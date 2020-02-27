@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Blog Admin</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" type="text/css" href="../Assets/admin/lib/bootstrap/css/bootstrap.css">
+    <link href="https://cdn.bootcss.com/bootstrap-switch/4.0.0-alpha.1/css/bootstrap-switch.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="../Assets/admin/stylesheets/theme.css">
+    <link rel="stylesheet" href="../Assets/admin/lib/font-awesome/css/font-awesome.css">
+
+    <!-- <script src="../Assets/admin/lib/jquery-1.7.2.min.js" type="text/javascript"></script> -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-switch/4.0.0-alpha.1/js/bootstrap-switch.min.js"></script>
+
+    <!-- Demo page code -->
+
+    <style type="text/css">
+        #line-chart {
+            height:300px;
+            width:800px;
+            margin: 0px auto;
+            margin-top: 1em;
+        }
+        .brand { font-family: georgia, serif; }
+        .brand .first {
+            color: #ccc;
+            font-style: italic;
+        }
+        .brand .second {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .table tr th,.table tr td{
+            text-align: center;
+        }
+        .total-cul li{
+            list-style: none;
+            background-color: #eee;
+            width: 200px;
+            margin-bottom: 3px;
+            height: 30px;
+            line-height: 30px;
+        }
+        .total-cul li .badge{float: right;margin-top: 5px;margin-right: 5px;background-color: #67b8e0;}
+        .total-cul li i{color:#2f5f90;}
+    </style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <!-- 加载angular.min.js -->
+    <script src="../Assets/libs/angular.min.js"></script>
+    <!-- 加载angular-ui-router.min.js -->
+    <script src="../Assets/libs/angular-ui-router.min.js"></script>
+    <!-- 加载angular文件上传插件 -->
+    <script src="../Assets/libs/ng-file-upload/ng-file-upload-shim.min.js"></script>
+    <script src="../Assets/libs/ng-file-upload/ng-file-upload.min.js"></script>
+    <!-- 加载angular分页插件 -->
+    <script src="../Assets/libs/pagination.js"></script>
+    <link rel="stylesheet" href="../Assets/libs/pagination.css">
+
+    <script src="../Assets/libs/moment/min/moment.min.js"></script>
+    <script src="../Assets/libs/moment/min/moment-with-locales.min.js"></script>
+  </head>
+
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7 "> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8 "> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9 "> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--> 
+  <body class="" ng-app="cafeAdmin"> 
+  <!--<![endif]-->
+    
+    <div class="navbar">
+        <div class="navbar-inner">
+                <ul class="nav pull-right">
+                    <li>
+                        <a href="#" role="button">
+                            <i class="icon-user"></i> admin
+                        </a>
+                    </li>
+                    <li><a href="#" class="hidden-phone visible-tablet visible-desktop" role="button">Logout</a></li>
+                </ul>
+                <a class="brand" href="index.html"><span class="first">Blog</span> <span class="second">Admin</span></a>
+        </div>
+    </div>
+    
+    <div class="sidebar-nav">
+        <a href="#dashboard-menu" class="nav-header" data-toggle="collapse"><i class="icon-dashboard"></i>控制面板</a>
+        <ul id="dashboard-menu" class="nav nav-list collapse in">
+            <li ui-sref="home"><a href="javascript:;">首页</a></li>
+            <li><a href="javascript:;" ui-sref="cate_list">分类管理</a></li>
+            <li><a href="javascript:;" ui-sref="food_list">菜品管理</a></li>
+            <li><a href="javascript:;" ui-sref="chef_list">厨师管理</a></li>
+            <li><a href="javascript:;" ui-sref="dynamic_list">动态管理</a></li>
+            <li><a href="javascript:;" ui-sref="orders_list">订单管理</a></li>
+        </ul>
+    </div>
+    
+
+    <div ui-view></div>
+    
+
+    <script src="../Assets/admin/lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $("[rel=tooltip]").tooltip();
+        $(function() {
+            $('.demo-cancel-click').click(function(){return false;});
+        });
+    </script>
+    
+    <!-- 这个主页面，需要加载一些主要文件 -->
+    <!-- 加载函数文件 -->
+    <script src="../Assets/libs/common.js"></script>
+
+    <!-- (1) 配置应用文件-->
+    <script src="../Src/app_admin.js"></script>
+    
+    <!-- (2) 加载路由文件-->
+    <script src="../Src/Router/router_admin.js"></script>
+
+    <!-- (3) 加载控制器文件-->
+    <script src="../Src/Controller/admin/home.js"></script>
+    <script src="../Src/Controller/admin/cate.js"></script>
+    <script src="../Src/Controller/admin/chef.js"></script>
+    <script src="../Src/Controller/admin/food.js"></script>
+    <script src="../Src/Controller/admin/dynamic.js"></script>
+    <script src="../Src/Controller/admin/orders.js"></script>
+    <script src="../Src/Controller/admin/comment.js"></script>
+    <script src="../Src/Controller/admin/foodimg.js"></script>
+
+    <script>
+        // 处理刷新页面的时候，要默认显示出首页
+        setTimeout(function(){
+            $('#dashboard-menu li:first').trigger('click');
+        },100);
+    </script>
+  </body>
+</html>
+
+

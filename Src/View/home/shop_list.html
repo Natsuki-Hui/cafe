@@ -1,0 +1,74 @@
+<!-- Start chopcafe_shop section -->
+		<section class="chopcafe_list_shop shop_list_1 section_padding">
+			<div class="container">
+				<div class="shop_filter">
+					<div class="row align-items-center">
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="shop_link">
+								<ul>
+									<li><a href="javascript:;" ui-sref="food({cid:0})"><i class="fas fa-th"></i></a></li>
+									<li><a href="javascript:;" ui-sref="food2({cid:0})" class="active_link"><i class="fas fa-list"></i></a></li>
+									<li><span>Showing 1 to 9 of 50 (9 Pages)</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="shop_sort d-flex align-items-center">
+								<!-- ng-change="cateList()" -->
+								<select id="selCate2" class="selectoption" class="" ng-model="cid">
+									<option value="" selected>全部</option>
+									<option value="{{x.cid}}" ng-repeat="x in clist">{{x.cname}}</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12" ng-repeat="x in flist">
+						<div class="grid_item food_list_box">
+							<div class="grid_inner_item">
+								<div class="chopcafe_img">
+									<img src="{{x.imgurl}}" class="img-fluid" alt="">
+									<div class="overlay_img"></div>
+									<div class="overlay_content">
+										<a href="{{x.imgurl}}" class="btn_a btn_zoom"><i class="fas fa-search"></i></a>
+										<a href="javascript:;" ui-sref="s_detail({fid:x.fid})" class="btn_a btn_link"><i class="fas fa-link"></i></a>
+										<a href="shop_list.html#" class="btn_a btn_heart"><i class="fas fa-heart"></i></a>
+									</div>
+								</div>
+								<div class="chopcafe_info">
+									<h3><a href="javascript:;" ui-sref="s_detail({fid:x.fid})">{{x.fname}}</a></h3>
+									<span class="price">{{x.price1|currency}} <s>{{x.price2|currency}}</s></span>
+									<ul class="rating" score="{{x.score}}">
+										<!-- <li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li>
+										<li><i class="fas fa-star"></i></li> -->
+									</ul>
+									<p>{{x.fdesc}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="chopcafe_pagination">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="pagination_list text-center">
+								<!-- <ul>
+									<li><a href="shop_list.html#"><i class="fas fa-angle-left"></i></a></li>
+									<li><a href="shop_list.html#">1</a></li>
+									<li class="page_active"><a href="shop_list.html#">2</a></li>
+									<li><a href="shop_list.html#">3</a></li>
+									<li><a href="shop_list.html#"><i class="fas fa-angle-right"></i></a></li>
+								</ul> -->
+								<tm-pagination conf="paginationConf"></tm-pagination>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End chopcafe_shop section -->

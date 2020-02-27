@@ -1,0 +1,73 @@
+<div class="content">
+        <div class="header">
+            <h1 class="page-title">修改菜品</h1>
+        </div>
+                <ul class="breadcrumb">
+            <li><a href="javscript:;" ui-sref="home">首页</a> <span class="divider">/</span></li>
+            <li class="active">修改菜品</li>
+        </ul>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                    
+<div class="btn-toolbar">
+    <button class="btn btn-primary" ui-sref="food_list"><i class="icon-list"></i> 菜品列表</button>
+  <div class="btn-group">
+  </div>
+</div>
+<div class="well">
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane active in" id="home">
+        <form>
+            <label>分类</label>
+            <select name="cate" class="input-xlarge" ng-model="food.cid" ng-options="x for (x,y) in clist">
+              <option value="">请选择</option>
+            </select>
+            <span style="color: red;" ng-show="iScid">请选择分类</span>
+            <!-- <p>{{cate}}</p> -->
+            <label>图片</label>
+            <input type="file" value="" class="input-xxlarge" ng-change="uploadImg()" ngf-select="true" ng-model="food.imgurl" ngf-multiple="false" ngf-accept="'image/*'" accept="image/*">
+            <span style="color: red;" ng-show="iSimgurl">请上传图片</span>
+            <img src="{{food.imgurl}}" alt="" style="width: 100px;">
+
+            <label>名称</label>
+            <input type="text" value="" ng-model="food.fname" class="input-xxlarge" required>
+            <span style="color: red;" ng-show="iSfname">请输入名称</span>
+
+            <label>购买价格</label>
+            <input type="number" value="" ng-model="food.price1" class="input-xxlarge">
+            <span style="color: red;" ng-show="iSprice1">请输入购买价格</span>
+
+            <label>市场价格</label>
+            <input type="number" value="" ng-model="food.price2" class="input-xxlarge">
+            <span style="color: red;" ng-show="iSprice2">请输入市场价格</span>
+
+            <label>评分</label>
+            <input type="text" value="" ng-model="food.score" class="input-xxlarge">
+            <span style="color: red;" ng-show="iSscore">请输入评分</span>
+
+            <label>描述</label>
+            <textarea value="Smith" rows="3" ng-model="food.fdesc" class="input-xxlarge"></textarea>
+            <span style="color: red;" ng-show="iSfdesc">请输入描述</span>
+
+            <label></label>
+            <input class="btn btn-primary" type="button" value="提交" ng-click="editFood()" />
+        </form>
+      </div>
+  </div>
+
+</div>
+
+
+                    
+                    <footer>
+                        <hr>
+                        <p class="pull-right"> by <a href="" target="_blank">技术大佬</a></p>
+                        
+
+                        <p>&copy; 2020</p>
+                    </footer>
+                    
+            </div>
+        </div>
+    </div>

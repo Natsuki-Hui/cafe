@@ -1,0 +1,64 @@
+<div class="content">
+    <div class="header">
+        <h1 class="page-title">相册列表</h1>
+    </div>
+    <ul class="breadcrumb">
+        <li><a href="javascript:;" ui-sref="home">Home</a> <span class="divider">/</span></li>
+        <li><a href="javascript:;" ui-sref="food_list">菜品列表</a> <span class="divider">/</span></li>
+        <li class="active">List</li>
+    </ul>
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+                
+<div class="btn-toolbar">
+<button class="btn btn-primary" ui-sref="falbum_add({fid:fid})"><i class="icon-plus"></i>上传相册</button>
+<div class="btn-group">
+</div>
+</div>
+<div class="well">
+<table class="table">
+  <thead>
+    <tr >
+      <th>ID</th>
+      <th>图片</th>
+      <th style="width: 60px;">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in list">
+      <td>{{$index+1}}</td>
+      <td><img src="{{item}}" style="width: 100px; height:100px" /></td>
+      <td>
+          <a href="#myModal" role="button" data-toggle="modal" ng-click="getAlbum(item)"><i class="icon-remove">删除</i></a>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+</div>
+
+<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">操作提醒</h3>
+</div>
+<div class="modal-body">
+    <p class="error-text"><i class="icon-warning-sign modal-icon"></i>您即将删除一条记录，是否删除</p>
+</div>
+<div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+    <button class="btn btn-danger" data-dismiss="modal" ng-click="delSure()">删除</button>
+</div>
+</div>
+          
+        <footer>
+            <hr>
+            <!-- Purchase a site license to remove this link from the footer: http://www.portnine.com/bootstrap-themes -->
+            <p class="pull-right">A <a href="http://www.portnine.com/bootstrap-themes" target="_blank">Free Bootstrap Theme</a> by <a href="http://www.portnine.com" target="_blank">Portnine</a></p>
+            <p>&copy; 2012 <a href="http://www.portnine.com" target="_blank">Portnine</a></p>
+        </footer>
+                
+        </div>
+    </div>
+</div>

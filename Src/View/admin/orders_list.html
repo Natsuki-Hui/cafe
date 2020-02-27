@@ -1,0 +1,97 @@
+    <div class="content">
+        <div class="header">
+            <h1 class="page-title">订单列表</h1>
+        </div>
+        <ul class="breadcrumb">
+            <li><a href="javascript:;" ui-sref="home">首页</a> <span class="divider">/</span></li>
+            <li class="active">订单列表</li>
+        </ul>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                    
+<div class="btn-toolbar">
+    <!-- <button class="btn btn-primary" ui-sref="orders_add"><i class="icon-plus"></i>添加订单</button> -->
+  <div class="btn-group">
+  </div>
+</div>
+
+<form class="form-inline orders_search" id="orders_search">
+  <div class="form-group" style="display: inline-block;">
+    <label>订单搜索</label>
+    <input type="text" class="form-control" placeholder="请输入订单姓名或手机号">
+  </div>
+  <button type="button" class="btn btn-default" ng-click="search()">搜索</button>
+</form>
+
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>姓名</th>
+          <th>手机号</th>
+          <th>日期</th>
+          <th>时间</th>
+          <th>人数</th>
+          <th>备注</th>
+          <th style="width: 60px;">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="x in clist">
+          <td>{{$index+1}}</td>
+          <td>{{x.name}}</td>
+          <td>{{x.phone}}</td>
+          <td>{{x.date}}</td>
+          <td>{{x.time}}</td>
+          <td>{{x.people}}</td>
+          <td>{{x.remark}}</td>
+          <td>
+              <!-- <a href="javascript:;" ui-sref="orders_edit({oid:x.oid})"><i class="icon-pencil">修改</i></a> -->
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove" ng-click="getId(x.oid)">删除</i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<div class="pagination">
+    <!-- <ul>
+        <li><a href="#">Prev</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">Next</a></li>
+    </ul> -->
+    <tm-pagination conf="paginationConf"></tm-pagination>
+</div>
+
+<!-- 模态框 -->
+<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">删除提醒</h3>
+    </div>
+    <div class="modal-body">
+        <p class="error-text"><i class="icon-warning-sign modal-icon"></i>您确定删除吗？</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+        <button class="btn btn-danger" data-dismiss="modal" ng-click="delCate()">确定</button>
+    </div>
+</div>
+
+
+                    
+                    <footer>
+                        <hr>
+                        <p class="pull-right"> by <a href="" target="_blank">技术大佬</a></p>
+                        
+
+                        <p>&copy; 2020</p>
+                    </footer>
+                    
+            </div>
+        </div>
+    </div>

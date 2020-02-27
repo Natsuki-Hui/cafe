@@ -1,0 +1,212 @@
+<!-- End chopcafe_breadcrumb section -->
+		<section class="chopcafe_shop_details shop_details_section section_padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="chopcafe_gallery_box gallery_box">
+							<div class="gallery_big" style="width: 510px;height: 325px;">
+								<div class="single_img" >
+									<img src="{{info.imgurl}}" class="img-fluid" alt="" style="width: 450px;height: 265px;">
+								</div>
+								<div class="single_img" ng-repeat="x in flist" repeat-finish>
+									<img src="{{x.imgurl}}" class="img-fluid" alt="" style="width: 450px;height: 265px;">
+								</div>
+								
+							</div>
+							<div class="gallery_small">
+								<div class="single_img">
+									<img src="{{info.imgurl}}" alt="" style="width: 113px;height: 113px;">
+								</div>
+								<div class="single_img" ng-repeat="x in flist" repeat-finish>
+									<img src="{{x.imgurl}}" alt="" style="width: 113px;height: 113px;">
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="product_details_area">
+							<h3 class="product_title ">{{info.fname}}</h3>
+							<ul class="rating" score="{{info.score}}">
+							<!-- 	<li><i class="fas fa-star"></i></li>
+								<li><i class="fas fa-star"></i></li>
+								<li><i class="fas fa-star"></i></li>
+								<li><i class="fas fa-star"></i></li>
+								<li><i class="fas fa-star"></i></li> -->
+								<li class="review_link"><a href="shop_details.html#">(07 Customer Reviews)</a></li>
+							</ul>
+							<p class="price">	
+								<span>{{info.price1|currency}}</span>
+								<span><del>{{info.price2|currency}}</del></span>
+							</p>
+							<p class="stock">Availability: <span>In Stock</span></p>
+							<p class="discription">{{info.fdesc}}</p>
+							<!-- <form>
+								<div class="form_group">
+									<input type="number" value="1">
+									<button class="chopcafe_btn cart_btn">Add to cart</button>
+								</div>
+							</form> -->
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="chopcafe_product_tab woocommerce_tabs">
+							<ul class="nav nav-tabs">
+							    <li class="nav-item">
+							      <a class="nav-link active" data-toggle="tab" href="shop_details.html#product_discription">详情</a>
+							    </li>
+							    <!-- <li class="nav-item">
+							      <a class="nav-link" data-toggle="tab" href="shop_details.html#reviews">reviews</a>
+							    </li> -->
+							</ul>
+							<!-- Tab panes -->
+							<div class="tab-content">
+							    <div id="product_discription" class="tab-pane active"><br>
+							      	<p>内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...内容描述...</p>
+							      	<ul>
+							      		<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+							      		<li>Morbi eu risus fringilla, auctor nibh nec, pharetra libero.</li>
+							      		<li>Cras id tortor et sem scelerisque facilisis.</li>
+							      		<li>Maecenas ultrices urna et iaculis efficitur.</li>
+							      		<li>Vivamus vel metus efficitur, rutrum augue vitae, vestibulum ipsum.</li>
+							      		<li>Ut sit amet lacus sed mi luctus suscipit.</li>
+							      	</ul>
+							    </div>
+							    <div id="reviews" class="tab-pane"><br>
+							      	<div class="review_area">
+							      		<div class="single_review">
+							      			<div class="author_thumb">
+							      				<img src="../Assets/home/images/thumb_1.jpg" class="img-fluid" alt="">
+							      			</div>
+							      			<div class="author_text">
+							      				<h5>Jhon Doe<span class="date">October 7, 2019</span></h5>
+							      				<ul class="rating">
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+												</ul>
+							      				<p>That is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</p>
+							      			</div>
+							      		</div>
+							      		<div class="single_review">
+							      			<div class="author_thumb">
+							      				<img src="../Assets/home/images/thumb_1.jpg" class="img-fluid" alt="">
+							      			</div>
+							      			<div class="author_text">
+							      				<h5>Stephen Smith <span class="date">October 7, 2019</span></h5>
+							      				<ul class="rating">
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+												</ul>
+							      				<p>That is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</p>
+							      			</div>
+							      		</div>
+							      		<div class="single_review">
+							      			<div class="author_thumb">
+							      				<img src="../Assets/home/images/thumb_1.jpg" class="img-fluid" alt="">
+							      			</div>
+							      			<div class="author_text">
+							      				<h5>Jhon Doe<span class="date">October 7, 2019</span></h5>
+							      				<ul class="rating">
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+												</ul>
+							      				<p>That is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</p>
+							      			</div>
+							      		</div>
+							      	</div>
+							      	<div class="review_form">
+							      		<h4>Add a Review</h4>
+							      		<form>
+							      			<div class="row">
+							      				<div class="col-lg-12">
+							      					<div class="rateing">
+							      						<h5>Your Rating</h5>
+							      						<div class="rating_star">
+														  	<input type="radio" name="star1" id="star_5"/> 
+														  	<input type="radio" name="star1" id="star_4"/> 
+														  	<input type="radio" name="star1" id="star_3"/>
+														  	<input type="radio" name="star1" id="star_2"/>
+														  	<input type="radio" name="star1" id="star_1"/>
+														  	<label for="star_1"></label>
+														  	<label for="star_2"></label>
+														  	<label for="star_3"></label>
+														 	<label for="star_4"></label>
+														  	<label for="star_5"></label>
+														</div>
+							      					</div>
+							      				</div>
+							      				<div class="col-lg-6">
+							      					<div class="form_group">
+							      						<input type="text" class="form_control" placeholder="Your Name" required>
+							      					</div>
+							      				</div>
+							      				<div class="col-lg-6">
+							      					<div class="form_group">
+							      						<input type="email" class="form_control" placeholder="E-mail Address" required>
+							      					</div>
+							      				</div>
+							      				<div class="col-lg-12">
+							      					<div class="form_group">
+							      						<textarea class="form_control" placeholder="Your Review"></textarea>
+							      					</div>
+							      				</div>
+							      				<div class="col-lg-12">
+							      					<div class="form_button">
+							      						<button class="chopcafe_btn post_btn">Submit</button>
+							      					</div>
+							      				</div>
+							      			</div>
+							      		</form>
+							      	</div>
+							    </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="chopcafe_grid_shop row">
+					<div class="col-lg-12">
+						<div class="releted_menu">
+							<h4>其他菜单</h4>
+							<div class="row">
+								<div class="col-lg-4 col-md-6 col-sm-12 menu_item breakfast lunch snaks" ng-repeat="x in flist">
+									<div class="grid_item food_grid_box">
+										<div class="grid_inner_item">
+											<div class="chopcafe_img">
+												<img src="{{x.imgurl}}" class="img-fluid" alt="" style="width: 370px;height: 365px;">
+												<div class="overlay_img"></div>
+												<div class="overlay_content">
+													<a href="{{x.imgurl}}" class="btn_a zoom_img"><i class="fas fa-search"></i></a>
+													<a href="javascript:;" ui-sref="s_detail({fid:x.fid})" class="btn_a btn_link"><i class="fas fa-link"></i></a>
+												</div>
+											</div>
+											<div class="chopcafe_info text-center">
+												<h3><a href="javascript:;" ui-sref="s_detail({fid:x.fid})">{{x.fname}}</a></h3>
+												<ul class="rating">
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+													<li><i class="fas fa-star"></i></li>
+												</ul>
+												<p>$ {{x.price1}}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>

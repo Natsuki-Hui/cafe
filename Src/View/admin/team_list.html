@@ -1,0 +1,84 @@
+<div class="content">
+    <div class="header">
+        <h1 class="page-title">厨师列表</h1>
+    </div>
+    <ul class="breadcrumb">
+        <li><a href="javascript:;" ui-sref="home">首页</a> <span class="divider">/</span></li>
+        <li class="active">厨师列表</li>
+    </ul>
+
+    <div class="container-fluid">
+<div class="row-fluid">
+                
+<div class="btn-toolbar">
+    <button class="btn btn-primary" ui-sref="team_add"><i class="icon-plus"></i>添加厨师</button>
+	<input type="search" id="b_search" ng-blur="search()" name="search" required="" placeholder="Search" x-webkit-speech="" x-webkit-grammar="builtin:search" lang="zh-CN" style="margin-left: 10px;margin-top: 10px;">
+	<input type="button" value="搜索" ng-click="search()">
+  <div class="btn-group">
+</div>
+</div>
+<div class="well">
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>图片</th>
+      <th>名称</th>
+      <th>职位</th>
+      <th>评分</th>
+      <th>介绍</th>
+      <th style="width: 60px;">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="x in tlist" repeat-finish>
+      <td>{{$index+1}}</td>
+      <td><img src="{{x.imgurl}}" alt="" width="80px" height="60px"></td>
+      <td>{{x.name}}</td>
+      <td>{{x.job}}</td>
+      <td>{{x.score}}</td>
+      <td>{{x.descs}}</td>
+      <td>
+        <!-- 开关 -->
+        <input style="margin-right: 5px;" name="is_rec" isRec="{{x.is_rec}}" chid="{{x.chid}}" type="checkbox">
+      </td>
+      <td>
+          <a href="javascript:;" ui-sref="team_edit({chid:x.chid})"><i class="icon-pencil">修改</i></a>
+          <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"  ng-click="getId(x.chid)">删除</i></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="pagination">
+  <tm-pagination conf="paginationConf"></tm-pagination>
+</div>
+
+<!-- 模态框 -->
+<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">删除提醒</h3>
+</div>
+<div class="modal-body">
+    <p class="error-text"><i class="icon-warning-sign modal-icon"></i>您确定删除吗？</p>
+</div>
+<div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+    <button class="btn btn-danger" data-dismiss="modal" ng-click="delchef()">确定</button>
+</div>
+</div>
+
+
+                
+                <footer>
+                    <hr>
+                    <p class="pull-right"> by <a href="" target="_blank">技术小白</a></p>
+                    
+
+                    <p>&copy; 2020</p>
+                </footer>
+                
+        </div>
+    </div>
+</div>

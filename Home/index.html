@@ -1,0 +1,392 @@
+<!-- 页面框架头部 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- all meta -->
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Page Title -->
+		<title>Chopcafe餐厅</title>
+		<!-- Favicon Icon -->
+		<link rel="shortcut icon" href="../Assets/home/images/favicon.ico"/>
+		<!-- All css here -->
+		<!-- Bootstrap css -->
+		<link rel="stylesheet" href="../Assets/home/plugin/bootstrap/css/bootstrap.min.css">
+		<!-- fontaweosme css -->
+		<link rel="stylesheet" href="../Assets/home/fonts/fontawesome/css/all.css">
+		<!-- flaticon css -->
+		<link rel="stylesheet" href="../Assets/home/fonts/flaticon/flaticon.css">
+		<!-- slick slider css -->
+		<link rel="stylesheet" href="../Assets/home/plugin/slick/slick.css">
+		<link rel="stylesheet" href="../Assets/home/plugin/slick/slick-theme.css">
+		<!-- sidebarmenu css -->
+		<link rel="stylesheet" href="../Assets/home/plugin/sidebar-menu/sidebar-menu.css">
+		<!-- jquery_ui css -->
+		<link rel="stylesheet" href="../Assets/home/plugin/jquery_ui/jquery-ui.min.css">
+		<!-- magnific css -->
+		<link rel="stylesheet" href="../Assets/home/plugin/magnific/magnific-popup.css">
+		<!-- magnific css -->
+		<link rel="stylesheet" href="../Assets/home/plugin/nicenumber/jquery.nice-number.css">
+		<!-- magnific css -->
+		<link rel="stylesheet" href="../Assets/home/plugin/niceselect/nice-select.css">
+		<!-- animate css -->
+		<link rel="stylesheet" href="../Assets/home/css/animate.css">
+		<!-- Style css -->
+		<link rel="stylesheet" href="../Assets/home/css/style.css">
+		<!-- Responsive css -->
+		<link rel="stylesheet" href="../Assets/home/css/responsive.css">
+
+
+		<!-- 加载angular.min.js -->
+		<script src="../Assets/libs/angular.min.js"></script>
+		<!-- 加载angular-ui-router.min.js -->
+		<script src="../Assets/libs/angular-ui-router.min.js"></script>
+
+		<!-- 加载angular分页插件 -->
+		<script src="../Assets/libs/pagination.js"></script>
+		<link rel="stylesheet" href="../Assets/libs/pagination.css">
+		<style>
+			.header_demo_2 .chopcafe_menu .main_menu ul li .active{
+				color: #9ec80e;
+			}
+			.sticky.header_demo_2 .chopcafe_menu .main_menu ul li .active{
+				color: #FFFF00!important;
+			}
+			.page-list .page-total{
+				display: none;
+			}
+			.pagination{
+				display: block;
+			}
+		</style>
+	</head>
+	<body ng-app="cafe">
+
+		<!-- Start search wrapper -->
+		<div class="search_wrapper">
+			<a href="home_v2.html#" class="close_link"><i class="fas fa-times"></i></a>
+			<form>
+				<input type="text" class="form_control" placeholder="search here">
+			</form>
+		</div>
+		<!-- End search wrapper -->
+		<!-- Start preloader area -->
+		<div class="preloader_area">
+			<div class="spinner">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+				<div class="line4"></div>
+				<div class="line5"></div>
+				<div class="line6"></div>
+				<div class="line7"></div>
+			</div>
+		</div>
+		<!-- End preloader area -->
+		<!-- Start header_area -->
+		<header class="header_area header_demo_2 transparent_header">
+			<!-- End site_menu -->
+			<div class="container">
+				<div class="site_menu">
+					<div class="row align-items-center">
+						<div class="col-lg-2">
+							<div class="brand_logo">
+								<a href="index.html" class="main_logo"><img src="../Assets/home/images/logo_4.png" class="img-fluid" alt=""></a>
+								<a href="index.html" class="sticky_logo"><img src="../Assets/home/images/logo_3.png" class="img-fluid" alt=""></a>
+							</div>
+						</div>
+						<div class="col-lg-10">
+							<div class="chopcafe_menu">
+								<nav class="main_menu">
+									<ul>
+										<li class="menu-item" ui-sref="home"><a href="javascript:;" class="active">首页</a>
+										</li>
+										<!-- <li class="menu-item"><a href="javascript:;" ui-sref="gallery">菜品列表1</a> -->
+										</li>
+										<li class="menu-item"><a href="javascript:;" ui-sref="team">厨师团队</a>
+										</li>
+										<li class="menu-item"><a href="javascript:;" ui-sref="food({cid:0})">菜品列表</a>
+										</li>
+										<li class="menu-item"><a href="javascript:;" ui-sref="news">最新动态</a>
+										</li>
+										<li class="search_icon"><a href="javascript:;" ui-sref="home" class="search_btn"><i class="fas fa-search"></i></a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- mobile menu -->
+				<div class="mobile_wrapper">
+					<div class="row align-items-center mobile_header">
+						<div class="col-lg-3 col-md-4 col-6">
+							<div class="brand_logo">
+								<a href="index.html"><img src="../Assets/home/images/logo_3.png" alt=""></a>
+							</div>
+						</div>
+						<div class="col-lg-9 col-md-8 col-6">
+							<div class="mobile_menu">
+								<ul>
+									<li class="cart_icon"><a href="home_v2.html#"><i class="fas fa-shopping-cart"></i></a></li>
+									<li><a href="home_v2.html#" class="menu_icon"><i class="fas fa-bars"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="sidenav_menu">
+						<div class="times_icon">
+							<a href="home_v2.html#" class="menu_icon"><i class="fas fa-times"></i></a>
+						</div>
+						<div class="brand_logo text-center">
+							<a href="index.html"><img src="../Assets/home/images/logo_3.png" alt=""></a>
+						</div>
+						<div class="sidebar_search">
+							<input type="text" placeholder="search here">
+						</div>
+						<ul class="sidebar-menu">
+							<li><a href="javascript:;" ui-sref="home">首页
+									<!-- <i class="fas fa-angle-down float-right"></i> --></a>
+							</li>
+							<!-- <li><a href="javascript:;" ui-sref="gallery">菜品列表1<i class="fas fa-angle-down float-right"></i></a> -->
+							</li>
+							<li><a href="javascript:;" ui-sref="team">厨师团队
+									<!-- <i class="fas fa-angle-down float-right"> --></i></a>
+							</li>
+							<li><a href="javascript:;" ui-sref="food({cid:0})">菜品列表
+									<!-- <i class="fas fa-angle-down float-right"></i> --></a>
+							</li>
+							<li><a href="javascript:;" ui-sref="news">最新动态
+									<!-- <i class="fas fa-angle-down float-right"></i> --></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- mobile menu -->
+			</div>
+			<!-- End site_menu -->
+		</header>
+		<!-- End header_area -->
+		<!-- Start header_bg seciton -->
+		<section class="header_bg header_bg_1 bg_image" style="background-image: url('../Assets/home/images/header_bg_1.jpg');">
+			<div class="bg_overlay"></div>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div class="welcome_content text-center">
+							<h1>Welcome to Chopcafe</h1>
+							<h3>美味佳肴之家</h3>
+							<a href="javascript:;" class="chopcafe_btn chopcafe_btn_2 order">预订</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End header_bg seciton -->
+		<!-- 页面框架头部 -->
+
+
+		<!-- 路由文件是延迟加载的 -->
+		<div ui-view=""></div>
+
+
+		<!-- 页面框架底部 -->
+		<!-- Start chopcafe_footer  -->
+		<footer class="chopcafe_footer chopcafe_footer_1 chopcafe_footer_2 bg_image" style="background-image: url('../Assets/home/images/footer_bg.jpg');">
+			<div class="bg_overlay"></div>
+			<div class="container">
+				<div class="footer_widget footer_widget_1">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="footer_widget_box">
+								<div class="widget_title">
+									<h4>联系我们</h4>
+								</div>
+								<div class="widget_contact">
+									<div class="info_list">
+										<div class="info_icon">
+											<i class="fas fa-map-marker-alt"></i>
+										</div>
+										<div class="info_text">
+											<p>美国北部<br>伦敦嘉实街360号</p>
+										</div>
+									</div>
+									<div class="info_list">
+										<div class="info_icon">
+											<i class="fas fa-envelope"></i>
+										</div>
+										<div class="info_text">
+											<p><a href="mailto:demochopcafe@gmail.com">demochopcafe@gmail.com</a></p>
+											<p><a href="mailto:chopcafeinfo@gmail.com">chopcafeinfo@gmail.com</a></p>
+										</div>
+									</div>
+									<div class="info_list">
+										<div class="info_icon">
+											<i class="fas fa-phone"></i>
+										</div>
+										<div class="info_text">
+											<p><a href="tel:+27882911891">+8123 456 7890</a></p>
+											<p><a href="tel:+27882911891">+278 8291 1891</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="footer_widget_box">
+								<div class="widget_title">
+									<h4>营业时间</h4>
+								</div>
+								<div class="widget_time">
+									<div class="time_list">
+										<h6>星期六 - 星期天 - 星期一</h6>
+										<p>早上08:00 - 晚上10:00</p>
+									</div>
+									<div class="time_list">
+										<h6>星期二 - 星期三</h6>
+										<p>早上10:00 - 晚上12:00</p>
+									</div>
+									<div class="time_list">
+										<h6>星期五</h6>
+										<p>不营业</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="footer_widget_box">
+								<div class="widget_title">
+									<h4>最新消息</h4>
+								</div>
+								<div class="widget_news">
+									<div class="single_news" ng-repeat="x in ddlist">
+										<div class="news_thumb">
+											<a href="javascript:;" ui-sref="b_detail({did:x.did})"><img src="{{x.imgurl}}" alt=""></a>
+										</div>
+										<div class="news_link">
+											<h3><a href="javascript:;" ui-sref="b_detail({did:x.did})">{{x.title}}</a></h3>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<!-- <div class="col-lg-3 col-md-6 col-sm-12">
+							<div class="footer_widget_box">
+								<div class="widget_title">
+									<h4>Follow Us on</h4>
+								</div>
+								<div class="footer_social_widget">
+									<ul class="social_widget">
+										<li><a href="home_v2.html#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+										<li><a href="home_v2.html#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+										<li><a href="home_v2.html#" class="pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+										<li><a href="home_v2.html#" class="vimeo"><i class="fab fa-vimeo-v"></i></a></li>
+										<li><a href="home_v2.html#" class="behance"><i class="fab fa-behance"></i></a></li>
+									</ul>
+								</div>
+								<div class="widget_payment">
+									<div class="widget_title">
+										<h4>Online Payments by</h4>
+									</div>
+									<div class="payment_method">
+										<a href="home_v2.html#"><img src="../Assets/home/images/pay_1.png" alt=""></a>
+										<a href="home_v2.html#"><img src="../Assets/home/images/pay_2.png" alt=""></a>
+										<a href="home_v2.html#"><img src="../Assets/home/images/pay_3.png" alt=""></a>
+									</div>
+								</div>
+							</div>
+						</div> -->
+					</div>
+				</div>
+				<div class="chopcafe_copyright chopcafe_copyright_1">
+					<div class="row align-items-center">
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="copyright_text">
+								<p>&copy; Copyright 2019 ChopCafe. All rights reserved.</p>
+							</div>
+						</div>
+						<!-- <div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="copyright_text float-right">
+								<p>Designed by Code Astrology</p>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- End chopcafe_footer  -->
+		<!-- scroll_top -->
+		<a id="scroll_top"><i class="fas fa-angle-up"></i></a>
+		<!-- jquery  -->
+		<script src="../Assets/home/js/jquery-1.12.4.min.js"></script>
+		<!-- bootstrap js -->
+		<script src="../Assets/home/plugin/bootstrap/js/bootstrap.min.js"></script>
+		<!-- Poper js -->
+		<script src="../Assets/home/plugin/bootstrap/js/popper.min.js"></script>
+		<!-- slick slider js -->
+		<script src="../Assets/home/plugin/slick/slick.min.js"></script>
+		<!-- magnific popup js -->
+		<script src="../Assets/home/plugin/magnific/jquery.magnific-popup.min.js"></script>
+		<!-- isotope js -->
+		<script src="../Assets/home/plugin/isotope/isotope.min.js"></script>
+		<!-- imagesloaded js -->
+		<script src="../Assets/home/plugin/imagesloaded/imagesloaded.min.js"></script>
+		<!-- couterup js -->
+		<script src="../Assets/home/plugin/counterup/jquery.counterup.min.js"></script>
+		<script src="../Assets/home/plugin/counterup/jquery.waypoints.min.js"></script>
+		<!-- countdown js -->
+		<script src="../Assets/home/plugin/countdown/jquery.countdown.min.js"></script>
+		<!-- jquery_ui js -->
+		<script src="../Assets/home/plugin/jquery_ui/jquery-ui.min.js"></script>
+		<!-- nice number js -->
+		<script src="../Assets/home/plugin/niceselect/jquery.nice-select.min.js"></script>
+		<!-- nice number js -->
+		<script src="../Assets/home/plugin/nicenumber/jquery.nice-number.min.js"></script>
+		<!-- sidebarmenu js -->
+		<script src="../Assets/home/plugin/sidebar-menu/sidebar-menu.js"></script>
+		<!-- jquery_ui js -->
+		<script src="../Assets/home/js/wow.min.js"></script>
+		<!-- main js -->
+		<script src="../Assets/home/js/main.js"></script>
+		<!-- jquery.ui.datepicker-zh-CN.js -->
+		<script src="../Assets/libs/jquery.ui.datepicker-zh-CN.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 页面框架底部 -->
+
+		<script src="../Assets/libs/moment/min/moment.min.js"></script>
+		<script src="../Assets/libs/moment/min/moment-with-locales.min.js"></script>
+
+		<!-- 加载函数文件 -->
+		<script src="../Assets/libs/common.js"></script>
+
+		<!-- 这个主页面，需要加载一些主要文件 -->
+		<!-- (1) 配置应用文件-->
+		<script src="../Src/app_home.js"></script>
+
+		<!-- (2) 加载路由文件-->
+		<script src="../Src/Router/router_home.js"></script>
+
+		<!-- (3) 加载控制器文件-->
+		<script src="../Src/Controller/home/home.js"></script>
+		<script src="../Src/Controller/home/team.js"></script>
+		<script src="../Src/Controller/home/food.js"></script>
+		<script src="../Src/Controller/home/news.js"></script>
+
+		<script>
+			// 处理刷新页面的时候，要默认显示出首页
+			// 处理方案，就是让程序主动去点击“首页”菜单
+			setTimeout(function() {
+				// console.log($('.main_menu ul li:first'))
+				$('.main_menu ul li:first').trigger('click'); // trigger('事件名称')  直接触发事件
+			}, 500);
+
+			$('.menu-item').on('click', function() {
+				$(this).children().addClass('active').end().siblings().children().removeClass('active')
+			})
+			$('.sidebar-menu li').on('click', function() {
+				$(this).addClass('active').siblings().removeClass('active')
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<div class="content">
+        <div class="header">
+            <h1 class="page-title">编辑分类</h1>
+        </div>
+                <ul class="breadcrumb">
+            <li><a href="javscript:;" ui-sref="home">首页</a> <span class="divider">/</span></li>
+            <li class="active">编辑分类</li>
+        </ul>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                    
+<div class="btn-toolbar">
+    <button class="btn btn-primary" ui-sref="cate_list"><i class="icon-list"></i> 分类列表</button>
+  <div class="btn-group">
+  </div>
+</div>
+<div class="well">
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane active in" id="home">
+        <form>
+            <label>图片</label>
+            <input type="file" value="" class="input-xxlarge" ng-change="uploadImg()" ngf-select="true" ng-model="cate.imgurl" ngf-multiple="false" ngf-accept="'image/*'" accept="image/*">
+            <span style="color: red;" ng-show="iSimgurl">请上传图片</span>
+            <img src="{{cate.imgurl}}" alt="" style="width: 100px;">
+
+            <label>名称</label>
+            <input type="text" value="" ng-model="cate.cname" class="input-xxlarge" required>
+            <span style="color: red;" ng-show="iScname">请输入名称</span>
+
+            <label>描述</label>
+            <textarea value="" rows="3" ng-model="cate.cdesc" class="input-xxlarge" required></textarea>
+            <span style="color: red;" ng-show="iScdesc">请输入描述</span>
+
+            <label></label>
+            <input class="btn btn-primary" type="button" ng-click="editCate()" value="提交" />
+        </form>
+      </div>
+  </div>
+
+</div>
+
+
+                    
+                    <footer>
+                        <hr>
+                        <p class="pull-right"> by <a href="" target="_blank">技术大佬</a></p>
+                        
+
+                        <p>&copy; 2020</p>
+                    </footer>
+                    
+            </div>
+        </div>
+    </div>

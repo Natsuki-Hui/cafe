@@ -1,0 +1,62 @@
+<div class="content">
+        <div class="header">
+            <h1 class="page-title">添加动态</h1>
+        </div>
+                <ul class="breadcrumb">
+            <li><a href="javscript:;" ui-sref="home">首页</a> <span class="divider">/</span></li>
+            <li class="active">添加动态</li>
+        </ul>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                    
+<div class="btn-toolbar">
+    <button class="btn btn-primary" ui-sref="dynamic_list"><i class="icon-list"></i> 动态列表</button>
+  <div class="btn-group">
+  </div>
+</div>
+<div class="well">
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane active in" id="home">
+        <form>
+            <label>图片</label>
+            <input type="file" value="" class="input-xxlarge" ng-change="uploadImg()" ngf-select="true" ng-model="dynamic.imgurl" ngf-multiple="false" ngf-accept="'image/*'" accept="image/*">
+            <span style="color: red;" ng-show="iSimgurl">请上传图片</span>
+
+            <label>作者</label>
+            <input type="text" value="" class="input-xxlarge" ng-model="dynamic.author">
+            <span style="color: red;" ng-show="iSauthor">请输入作者</span>
+
+            <!-- <label>时间</label>
+            <input type="text" value="" class="input-xxlarge" ng-model="dynamic.addtime">
+            <span style="color: red;" ng-show="iSaddtime">请输入时间</span> -->
+
+            <label>标题</label>
+            <input type="text" value="" class="input-xxlarge" ng-model="dynamic.title">
+            <span style="color: red;" ng-show="iStitle">请输入标题</span>
+
+            <label>内容</label>
+            <textarea value="Smith" rows="3" class="input-xxlarge" ng-model="dynamic.content"></textarea>
+            <span style="color: red;" ng-show="iScontent">请输入内容</span>
+
+            <label></label>
+            <input class="btn btn-primary" type="submit" value="提交" ng-click="addCate()"/>
+        </form>
+      </div>
+  </div>
+
+</div>
+
+
+                    
+                    <footer>
+                        <hr>
+                        <p class="pull-right"> by <a href="" target="_blank">技术大佬</a></p>
+                        
+
+                        <p>&copy; 2020</p>
+                    </footer>
+                    
+            </div>
+        </div>
+    </div>

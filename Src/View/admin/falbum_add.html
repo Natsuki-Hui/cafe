@@ -1,0 +1,62 @@
+<div class="content">
+  <div class="header">
+      <h1 class="page-title">上传相册</h1>
+  </div>
+    <ul class="breadcrumb">
+      <li><a href="javascript:;" ui-sref="home">Home</a> <span class="divider">/</span></li>
+      <li><a href="javascript:;" ui-sref="falbum_list({fid:fid})">相册列表</a> <span class="divider">/</span></li>
+      <li class="active">上传相册</li>
+    </ul>
+
+  <div class="container-fluid">
+      <div class="row-fluid">
+              
+<div class="btn-toolbar">
+<button class="btn btn-primary" onClick="location='list.html'"><i class="icon-list"></i> 相册列表</button>
+<div class="btn-group">
+</div>
+</div>
+<div class="well">
+<div id="myTabContent" class="tab-content">
+<div class="tab-pane active in" id="home">
+  <form  method="post">
+      <label>图片</label>
+      <input type="file" name="file" ngf-select ng-model="album.imgurl" ngf-multiple="false" ngf-accept="'image/*'" accept="image/*" ng-change="uploadImg()" />
+      <p ng-show="isImgurl" style="color: #FFFF00">请上传图片</p>
+      <label></label>
+      <input class="btn btn-primary" type="button" value="提交" ng-click="addAlbum()" />
+  </form>
+</div>
+</div>
+
+</div>
+
+<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+<h3 id="myModalLabel">Delete Confirmation</h3>
+</div>
+<div class="modal-body">
+
+<p class="error-text"><i class="icon-warning-sign modal-icon"></i>您即将删除一条列表项</p>
+</div>
+<div class="modal-footer">
+<button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+<button class="btn btn-danger" data-dismiss="modal">删除</button>
+</div>
+</div>
+
+
+              
+              <footer>
+                  <hr>
+                  <!-- Purchase a site license to remove this link from the footer: http://www.portnine.com/bootstrap-themes -->
+                  <p class="pull-right"> <a href="" target="_blank">技术小王</a> - <a href="" target="_blank">制作</a></p>
+                  
+
+                  <p>&copy; 2020 <a href="" target="_blank">Portnine</a></p>
+              </footer>
+              
+      </div>
+  </div>
+</div>

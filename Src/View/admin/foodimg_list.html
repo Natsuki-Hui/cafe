@@ -1,0 +1,92 @@
+    <div class="content">
+        <div class="header">
+            <h1 class="page-title">相册列表</h1>
+        </div>
+        <ul class="breadcrumb">
+            <li><a href="javascript:;" ui-sref="home">首页</a> <span class="divider">/</span></li>
+            <li><a href="javascript:;" ui-sref="food_list">菜品列表</a> <span class="divider">/</span></li>
+            <li class="active">相册列表</li>
+        </ul>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                    
+<!-- <div class="btn-toolbar">
+    <button class="btn btn-primary"><i class="icon-plus"></i>添加相册</button>
+  <div class="btn-group">
+  </div>
+</div> -->
+<div class="well">
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane active in" id="home">
+        <form>
+            <label><h3 style="color: #333;">添加相册图片</h3></label>
+            <input type="file" value="" class="input-xxlarge" ngf-change="uploadImg()" ng-model="foodimg.imgurl" ngf-select="true" ngf-multiple="false" ngf-accept="'image/*'" accept="image/*">
+            <span style="color: red;" ng-show="iSimgurl">请上传图片</span>
+
+            <label></label>
+            <input class="btn btn-primary" type="button" ng-click="addImg()" value="提交" />
+        </form>
+      </div>
+  </div>
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>图片</th>
+          <th style="width: 60px;">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="x in flist">
+          <td>{{$index+1}}</td>
+          <td><img src="{{x.imgurl}}" alt="" style="width: 100px; height: 50px;"></td>
+          <td>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove" ng-click="getId(x.fiid)">删除</i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<div class="pagination">
+    <!-- <ul>
+        <li><a href="#">Prev</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">Next</a></li>
+    </ul> -->
+
+    <tm-pagination conf="paginationConf"></tm-pagination>
+</div>
+
+<!-- 模态框 -->
+<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">删除提醒</h3>
+    </div>
+    <div class="modal-body">
+        <p class="error-text"><i class="icon-warning-sign modal-icon"></i>您确定删除吗？</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+        <button class="btn btn-danger" data-dismiss="modal" ng-click="delCate()">确定</button>
+    </div>
+</div>
+
+
+                    
+                    <footer>
+                        <hr>
+                        <p class="pull-right"> by <a href="" target="_blank">技术大佬</a></p>
+                        
+
+                        <p>&copy; 2020</p>
+                    </footer>
+                    
+            </div>
+        </div>
+    </div>

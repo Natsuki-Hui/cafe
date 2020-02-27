@@ -1,0 +1,345 @@
+<!-- Start chopcafe_about section -->
+		<section class="chopcafe_about chopcafe_about_2 section_padding_2">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<div class="chopcafe_content_box">
+							<div class="chopcafe_title content_title">
+								<h2>对我们的了解</h2>
+								<div class="title_divider">
+									<i class="flaticon-fork-and-knife-in-cross title_fork"></i>
+								</div>
+							</div>
+							<div class="about_text">
+								<p>《中餐厅》以弘扬中华传统中的“家文化”，在一道道美食之间渗透了源远流长的中华文化与力量，彰显了主流媒体担当的同时，更唤醒了国人对于中华文化的自信和骄傲，也让具有深厚历史文化的中国食物走向世界，《中餐厅》以美食经营为媒介，将中国饮食文化以及中华传统文化通过镜头的真实纪录一一呈现，不但承载了时代下有关传统文化命题的思考，同时以节目载体，身体力行地将传承和发扬中华传统文化作为己任  。</p>
+								<a href="javascript:;" class="chopcafe_btn chopcafe_btn_2 order">立即预订</a>
+								<a href="https://www.youtube.com/watch?v=3AtDnEC4zak" class="play_btn"><i class="fas fa-play"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="chopcafe_img_box">
+							<div class="chopcafe_img">
+								<img src="../Assets/home/images/about_3.jpg" class="img-fluid" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End chopcafe_about section -->
+		<!-- Start chopcafe_popular_item section -->
+		<section class="chopcafe_popular_item section_padding_2">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6">
+						<div class="chopcafe_title chopcafe_title_2 text-center">
+							<h2>我们最受欢迎的<span>商品</span></h2>
+							<div class="title_divider">
+								<i class="flaticon-fork-and-knife-in-cross title_fork"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="popular_item_slide">
+							<div class="grid_item food_box" ng-repeat="x in flist" repeat-finish>
+								<div class="grid_inner_item">
+									<div class="chopcafe_img">
+										<img src="{{x.imgurl}}" class="img-fluid" alt="" style="width: 263px;height: 260px;">
+									</div>
+									<div class="chopcafe_info text-center">
+										<span>$ {{x.price1}}</span>
+										<h3><a href="javascript:;" ui-sref="s_detail({fid:x.fid})">{{x.fname}}</a></h3>
+										<ul class="rating" score="{{x.score}}">
+											<!-- <li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li>
+											<li><i class="fas fa-star"></i></li> -->
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End chopcafe_popular_item section -->
+		<!-- Start chopcafe_fetaures section -->
+		<section class="chopcafe_fetaures chopcafe_fetaures_1 section_padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="chopcafe_img_box">
+							<div class="chopcafe_img fetaures_img">
+								<img src="../Assets/home/images/feature_1.jpg" class="img-fluid" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="chopcafe_content_box">
+							<div class="chopcafe_title content_title">
+								<h2>我们强大的功能</h2>
+								<div class="title_divider">
+									<i class="flaticon-fork-and-knife-in-cross title_fork"></i>
+								</div>
+							</div>
+							<!-- <div class="chopcafe_text_box">
+								<p>Sedut perspiciatis unde omnis iste natus error sitlutem acc usantium doloremque laudantium totam remaperiaeaque ipsa quae ab illo inventore veritatis</p>
+							</div> -->
+							<div class="chopcafe_feature_list">
+								<div class="single_feature">
+									<div class="chopcafe_icon">
+										<i class="flaticon-chef"></i>
+									</div>
+									<div class="chopcafe_info">
+										<h4>与可爱的和专业的厨师</h4>
+										<p>在工作中要把促进发展和满足顾客需求摆在首位，将个人利益置后，带着感情工作。</p>
+									</div>
+								</div>
+								<div class="single_feature">
+									<div class="chopcafe_icon">
+										<i class="flaticon-food-and-restaurant"></i>
+									</div>
+									<div class="chopcafe_info">
+										<h4>在网上预订桌子</h4>
+										<p>客人可以提前和饭店联系,饭店可以网上预定，也可以提前把饭菜选好。</p>
+									</div>
+								</div>
+								<div class="single_feature">
+									<div class="chopcafe_icon">
+										<i class="flaticon-delivery-van"></i>
+									</div>
+									<div class="chopcafe_info">
+										<h4>免费快递</h4>
+										<p>为客户提供送货上门服务，支持货到付款，支持现金、POS机刷卡；</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End chopcafe_fetaures section -->
+		<!-- Start chopcafe_menu section -->
+		<section class="chopcafe_menu chopcafe_menu_2 bg_image" style="background-image: url('../Assets/home/images/menu_bg_1.jpg');">
+			<div class="bg_overlay"></div>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6">
+						<div class="chopcafe_title chopcafe_title_2 overlay_title text-center">
+							<h2>我们美味的<span>菜单</span></h2>
+							<div class="title_divider">
+								<i class="flaticon-fork-and-knife-in-cross title_fork"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-md-12 col-sm-12" ng-repeat="y in clist">
+						<div class="grid_item food_list_box">
+							<div class="grid_inner_item">
+								<div class="chopcafe_img">
+									<img src="{{y.imgurl}}" class="img-fluid" alt="">
+									<div class="overlay_img"></div>
+									<div class="overlay_content">
+										<a href="../Assets/home/images/menu_1.jpg" class="btn_a btn_zoom"><i class="fas fa-search"></i></a>
+										<a href="home_v2.html#" class="btn_a btn_link"><i class="fas fa-link"></i></a>
+									</div>
+								</div>
+								<div class="chopcafe_info">
+									<h3><a href="javascript:;" ui-sref="food({cid:y.cid})">{{y.cname}}</a></h3>
+									<!-- <h4>$45.99</h4> -->
+									<p>{{y.cdesc}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<!-- End chopcafe_menu section -->
+		<!-- Start chopcafe_chef section -->
+		<section class="chopcafe_chef chopcafe_chef_2 section_padding_2">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6">
+						<div class="chopcafe_title chopcafe_title_2 text-center">
+							<h2>认识我们的<span>专业厨师</span></h2>
+							<div class="title_divider">
+								<i class="flaticon-fork-and-knife-in-cross title_fork"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-sm-12" ng-repeat="x in chlist">
+						<div class="chef_box">
+							<div class="chopcafe_img">
+								<img src="{{x.imgurl}}" class="img-fluid" alt="">
+								<div class="overlay_img"></div>
+								<div class="overlay_content">
+									<div class="social">
+										<ul>
+											<li><a href="javascript:;" ui-sref="n_detail({chid:x.chid})"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="javascript:;" ui-sref="n_detail({chid:x.chid})"><i class="fab fa-twitter"></i></a></li>
+											<li><a href="javascript:;" ui-sref="n_detail({chid:x.chid})"><i class="fab fa-linkedin-in"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="chef_info">
+								<h3><a href="javascript:;" ui-sref="n_detail({chid:x.chid})">{{x.name}}</a></h3>
+								<!-- <p>Fry / saute cook</p> -->
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<!-- End chopcafe_chef section -->
+		<!-- Start chopcafe_reservation section -->
+		<section class="chopcafe_reservation chopcafe_reservation_2 section_padding_2 bg_image" style="background-image: url('../Assets/home/images/book_bg_1.jpg');">
+			<div class="bg_overlay"></div>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6">
+						<div class="chopcafe_title overlay_title chopcafe_title_2 text-center">
+							<h2 id="orderForm">立即 <span>预订</span></h2>
+							<div class="title_divider">
+								<i class="flaticon-fork-and-knife-in-cross title_fork"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="reservation_form">
+							<form id="oForm">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="form_group">
+											<input type="text" class="form_control" placeholder="请输入您的姓名" name="name" ng-model="order.name" required>
+											<i class="fas fa-user"></i>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form_group">
+											<input type="text" class="form_control" placeholder="请输入您的手机号" name="Number" ng-model="order.phone" required>
+											<i class="fas fa-phone"></i>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="form_group">
+											<input id="datepicker" type="text" class="form_control" placeholder="请选择日期" name="Date" ng-model="order.date" required>
+											<i class="fas fa-calendar-alt"></i>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="form_group">
+											<input type="text" class="form_control" placeholder="请输入时间" name="time" ng-model="order.time" required>
+											<i class="fas fa-clock"></i>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="form_group">
+											<input type="text" class="form_control" placeholder="请输入人数" name="text" ng-model="order.people" required oninput = "value=value.replace(/[^\d]/g,'')">
+											<i class="fas fa-user-friends"></i>
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<div class="form_group">
+											<textarea class="form_control" placeholder="请说说特别的事" name="Message" ng-model="order.remark"></textarea>
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<div class="form_button text-center">
+											<button class="chopcafe_btn chopcafe_btn_2 form_btn" ng-click="addOrder()">预订</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="chopcafe_img_box">
+							<div class="chopcafe_img reservation_img">
+								<img src="../Assets/home/images/book_1.png" class="img-fluid" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End chopcafe_reservation section -->
+		<!-- Start chopcafe_testimonial section -->
+		<section class="chopcafe_testimonial chopcafe_testimonial_2 section_padding_2">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-6">
+						<div class="chopcafe_title chopcafe_title_2 text-center">
+							<h2><span>我们的客户</span>说</h2>
+							<div class="title_divider">
+								<i class="flaticon-fork-and-knife-in-cross title_fork"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div class="testimonial_slider_1 text-center">
+							<div class="testimonial_box">
+								<div class="testimonial_info">
+									<p>评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...</p>
+								</div>
+								<div class="testimonial_author">
+									<div class="author_thumb">
+										<img src="../Assets/home/images/client_1.jpg" alt="">
+									</div>
+									<div class="author_info">
+										<h4>Saiful Islam</h4>
+										<p>CEO & 创始人</p>
+									</div>
+								</div>
+							</div>
+							<div class="testimonial_box">
+								<div class="testimonial_info">
+									<p>评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...</p>
+								</div>
+								<div class="testimonial_author">
+									<div class="author_thumb">
+										<img src="../Assets/home/images/client_1.jpg" alt="">
+									</div>
+									<div class="author_info">
+										<h4>Saiful Islam</h4>
+										<p>CEO & 创始人</p>
+									</div>
+								</div>
+							</div>
+							<div class="testimonial_box">
+								<div class="testimonial_info">
+									<p>评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...评价内容...</p>
+								</div>
+								<div class="testimonial_author">
+									<div class="author_thumb">
+										<img src="../Assets/home/images/client_1.jpg" alt="">
+									</div>
+									<div class="author_info">
+										<h4>Saiful Islam</h4>
+										<p>CEO & 创始人</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End chopcafe_testimonial section

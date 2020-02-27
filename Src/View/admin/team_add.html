@@ -1,0 +1,52 @@
+<div class="content">
+    <div class="header">
+        <h1 class="page-title">添加厨师</h1>
+    </div>
+            <ul class="breadcrumb">
+        <li><a href="javscript:;" ui-sref="home">首页</a> <span class="divider">/</span></li>
+        <li class="active">添加厨师</li>
+    </ul>
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+                
+<div class="btn-toolbar">
+<button class="btn btn-primary" ui-sref="team_list"><i class="icon-list"></i> 厨师列表</button>
+<div class="btn-group">
+</div>
+</div>
+<div class="well">
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane active in" id="home">
+    <form>
+        <label>图片</label>
+        <input type="file" value="" class="input-xxlarge" ngf-select="true" ng-model="team.imgurl" ngf-multiple="false" ngf-change="uploadImg()" ngf-accept="'image/*'" accept="image/*">
+        <label>名称</label>
+        <input type="text" value="" ng-model="team.name" class="input-xxlarge">
+        <label>职位</label>
+        <input type="text" value="" ng-model="team.job" class="input-xxlarge">
+        <label>评分</label>
+        <input type="text" value="" ng-model="team.score" class="input-xxlarge">
+        <label>介绍</label>
+        <textarea value="Smith" rows="3" ng-model="team.descs" class="input-xxlarge"></textarea>
+        <label></label>
+        <input class="btn btn-primary" type="button" ng-click="addTeam()" value="提交" />
+    </form>
+  </div>
+</div>
+
+</div>
+
+
+                
+                <footer>
+                    <hr>
+                    <p class="pull-right"> by <a href="" target="_blank">技术小白</a></p>
+                    
+
+                    <p>&copy; 2020</p>
+                </footer>
+                
+        </div>
+    </div>
+</div>

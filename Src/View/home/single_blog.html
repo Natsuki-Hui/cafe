@@ -1,0 +1,98 @@
+<!-- End chopcafe_breadcrumb section -->
+		<section class="chopcafe_single_blog single_blog_section section_padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="single_blog_main">
+							<div class="post_meta">
+								<ul>
+									<li><img src="../Assets/home/images/author_1.jpg" alt=""><span>By <a href="single_blog.html#">{{info.author}}</a></span></li>
+									<li>{{info.addtime|ago}}</li>
+									<li>发表于 : <a href="single_blog.html#">微博</a></li>
+								</ul>
+							</div>
+							<div class="post_content">
+								<div class="chopcafe_img">
+									<img src="{{info.imgurl}}" alt="">
+								</div>
+								<div class="post_text">
+									{{info.content}}
+									<!-- <h3>How to cook, taste & delicious chicken Biriyani</h3>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum pass.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum pass.</p>
+									<div class="chopcafe_blockquote">
+										<h4>“ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.”</h4>
+									</div>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum pass.Lorem</p> -->
+								</div>
+							</div>
+							<div class="post_share_tag" style="border-top: 0;">
+								<!-- <div class="row">
+									<div class="col-lg-6 col-md-6 col-sm-12">
+										<div class="post_tag">
+											<ul>
+												<li><span>Related Tag :</span></li>
+												<li><a href="single_blog.html#">Food</a></li>
+												<li><a href="single_blog.html#">Restaurant</a></li>
+												<li><a href="single_blog.html#">Lunch</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6 col-sm-12">
+										<div class="post_share">
+											<ul class="social_link">
+												<li><span>Share :</span></li>
+												<li><a href="single_blog.html#"><i class="fab fa-facebook-f"></i></a></li>
+												<li><a href="single_blog.html#"><i class="fab fa-twitter"></i></a></li>
+												<li><a href="single_blog.html#"><i class="fab fa-linkedin-in"></i></a></li>
+												<li><a href="single_blog.html#"><i class="fab fa-pinterest-p"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div> -->
+							</div>
+							<div class="post_comment">
+								<h4>评论（{{count}}篇）: </h4>
+								<div class="single_comment d-flex" ng-repeat="x in clist">
+									<div class="author_thumb">
+										<img src="../Assets/home/images/comment_1.jpg" alt="">
+									</div>
+									<div class="author_text">
+										<h5>{{x.nickname}}</h5>
+										<p>{{x.content}}</p>
+										<!-- <span><a href="single_blog.html#"><i class="fas fa-reply"></i>Reply</a></span> -->
+									</div>
+								</div>
+								
+							</div>
+							<div class="chopcafe_comment_form">
+								<h4>留下你的评论</h4>
+								<form id="comment_form">
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="form_group">
+												<input type="text" class="form_control" placeholder="请输入您的昵称" required  ng-model="com.nickname">
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form_group">
+												<input type="text" class="form_control" placeholder="请输入您的邮箱" required ng-model="com.email">
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<div class="form_group">
+												<textarea class="form_control" placeholder="请输入您的评论内容" name="message" ng-model="com.content"></textarea>
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<div class="form_button">
+												<button type="button" class="chopcafe_btn form_btn" ng-click="addCom()">提交评论</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
